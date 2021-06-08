@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Big Shoulders Display', cursive;
+
+font-family: 'Lexend Deca', sans-serif; */
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    
+}
+
+#card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#sedan {
+    background-color: hsl(31, 77%, 52%);
+}
+
+#suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+#luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1em;
+}
