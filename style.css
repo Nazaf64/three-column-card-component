@@ -3,6 +3,7 @@
     --suv-color: hsl(184, 100%, 22%);
     --luxury-color: hsl(179, 100%, 13%);
     --wrapper-border-radius: 5px;
+    --button-border: 2px;
 }
 
 *{
@@ -17,7 +18,6 @@ font-family: 'Lexend Deca', sans-serif; */
 
 body, button {
     background-color: hsl(0, 0%, 95%);
-
 }
 
 body {
@@ -56,6 +56,10 @@ h1{
 }
 .sedan button {
     color: var(--sedan-color);
+    border: var(--button-border) solid var(--sedan-color);
+}
+.sedan button:active {
+    background-color: var(--sedan-color);
 }
 
 .suv {
@@ -63,6 +67,10 @@ h1{
 }
 .suv button {
     color: var(--suv-color);
+    border: var(--button-border) solid var(--suv-color);
+}
+.suv button:active {
+    background-color: var(--suv-color);
 }
 
 .luxury {
@@ -72,10 +80,24 @@ h1{
 }
 .luxury button {
     color: var(--luxury-color);
+    border: var(--button-border) solid var(--luxury-color);
+}
+.luxury button:active {
+    background-color: var(--luxury-color);  
+}
+
+.sedan button:active, .suv button:active, .luxury button:active{
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+.sedan button:hover, .suv button:hover, .luxury button:hover{
+    cursor: pointer;
 }
 
 img {
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 2em;
 }
 
@@ -87,9 +109,36 @@ p {
 }
 
 button{
-    border: none;
     border-radius: 50px;
     padding: 1.2em 1.8em;
     border-color: hsla(0, 0%, 100%, 0.75);
     margin-bottom: 3em;
+}
+
+@media (max-width: 900px) {
+    main {
+        width: 80vw;
+        max-width: 400px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        height: 100vh;
+    }
+    
+    #card-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .car{
+        border-radius: 0;
+    }
+
+    .sedan {
+        border-top-left-radius: var(--wrapper-border-radius);
+        border-top-right-radius: var(--wrapper-border-radius);
+    }
+
+    .luxury {
+        border-bottom-left-radius: var(--wrapper-border-radius);
+        border-bottom-right-radius: var(--wrapper-border-radius);
+    }
 }
