@@ -1,3 +1,10 @@
+:root{
+    --sedan-color: hsl(31, 77%, 52%);
+    --suv-color: hsl(184, 100%, 22%);
+    --luxury-color: hsl(179, 100%, 13%);
+    --wrapper-border-radius: 5px;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -8,15 +15,22 @@
 
 font-family: 'Lexend Deca', sans-serif; */
 
-body {
+body, button {
     background-color: hsl(0, 0%, 95%);
-    font-family: 'Lexend Deca', sans-serif;
+
 }
 
-h1{
-    color: hsl(0, 0%, 95%);
-    font-family: 'Big Shoulders Display', cursive;
-    
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+main {
+    max-width: 1000px;
 }
 
 #card-wrapper{
@@ -24,19 +38,58 @@ h1{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#sedan {
-    background-color: hsl(31, 77%, 52%);
+.car {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
 }
 
-#suv {
-    background-color: hsl(184, 100%, 22%);
+h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5em;
 }
 
-#luxury {
-    background-color: hsl(179, 100%, 13%);
+.sedan {
+    background-color: var(--sedan-color);
+    border-top-left-radius: var(--wrapper-border-radius);
+    border-bottom-left-radius: var(--wrapper-border-radius);
+}
+.sedan button {
+    color: var(--sedan-color);
+}
+
+.suv {
+    background-color: var(--suv-color);
+}
+.suv button {
+    color: var(--suv-color);
+}
+
+.luxury {
+    background-color: var(--luxury-color);
+    border-top-right-radius: var(--wrapper-border-radius);
+    border-bottom-right-radius: var(--wrapper-border-radius);
+}
+.luxury button {
+    color: var(--luxury-color);
+}
+
+img {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 p {
     color: hsla(0, 0%, 100%, 0.75);
-    line-height: 1em;
+    line-height: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+button{
+    border: none;
+    border-radius: 50px;
+    padding: 1.2em 1.8em;
+    border-color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 3em;
 }
