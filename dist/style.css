@@ -58,7 +58,7 @@ h1{
     color: var(--sedan-color);
     border: var(--button-border) solid var(--sedan-color);
 }
-.sedan button:active {
+.sedan button:active, .sedan button:hover {
     background-color: var(--sedan-color);
 }
 
@@ -69,7 +69,7 @@ h1{
     color: var(--suv-color);
     border: var(--button-border) solid var(--suv-color);
 }
-.suv button:active {
+.suv button:active, .suv button:hover {
     background-color: var(--suv-color);
 }
 
@@ -82,7 +82,7 @@ h1{
     color: var(--luxury-color);
     border: var(--button-border) solid var(--luxury-color);
 }
-.luxury button:active {
+.luxury button:active, .luxury button:hover {
     background-color: var(--luxury-color);  
 }
 
@@ -94,6 +94,9 @@ h1{
 
 .sedan button:hover, .suv button:hover, .luxury button:hover{
     cursor: pointer;
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    
 }
 
 img {
